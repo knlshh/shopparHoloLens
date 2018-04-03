@@ -101,6 +101,15 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         {
             TextMesh textObject = GameObject.Find("Text2").GetComponent<TextMesh>();
             textObject.text = mTrackableBehaviour.TrackableName;
+            string url = "http://shoppar-env.us-east-2.elasticbeanstalk.com/product/id/5a8a3295734d1d041bb72f97";
+            StartCoroutine(getRequest(url));
+        }
+        if (mTrackableBehaviour.TrackableName == "Book")
+        {
+            TextMesh textObject = GameObject.Find("Info").GetComponent<TextMesh>();
+            textObject.text = mTrackableBehaviour.TrackableName;
+            string url = "http://shoppar-env.us-east-2.elasticbeanstalk.com/product/id/5a8a3295734d1d041bb72f97";
+            StartCoroutine(getRequest(url));
         }
 
     }
